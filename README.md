@@ -27,10 +27,10 @@ Just for a school work,hope it can help you
 ## 使用说明
 ### 1. 快速运行
 直接运行主脚本即可启动算法求解：
-
+```python
 python 8_bishops_solver.py
-
-脚本会自动执行以下流程：
+```
+#脚本会自动执行以下流程：
 1. 初始化算法参数和粒子群
 2. 并行迭代优化（QPSO+SA+贪心精炼）
 3. 记录并输出最优解信息
