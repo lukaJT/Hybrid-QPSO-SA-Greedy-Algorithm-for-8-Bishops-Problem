@@ -11,7 +11,7 @@ Just for a school work,hope it can help you
 # 核心特性
 ## 1. 混合算法框架
 - **QPSO（量子粒子群优化）**：负责全局探索，通过量子概率更新机制高效搜索解空间，避免传统PSO的早熟收敛问题
--**SA（模拟退火）**：引入Metropolis准则，允许偶尔接受较差解，帮助算法跳出局部最优陷阱
+- **SA（模拟退火）**：引入Metropolis准则，允许偶尔接受较差解，帮助算法跳出局部最优陷阱
 - **贪心算法**：对全局最优解进行局部精炼，快速提升解质量（优先添加无冲突主教，或移除冲突最大的主教）
 
 ## 2. 性能优化
@@ -49,7 +49,7 @@ best_board, solutions, history, solution_discovery_points = solve_bishops_hybrid
 其他关键参数（SA相关）可在`SimulatedAnnealing`类初始化时调整：
 - `initial_temp=200`：SA初始温度（150-250，影响早期探索能力）
 - `cooling_rate=0.98`：SA冷却率（0.95-0.99，平衡探索与收敛）
-
+```
 
 ## 算法原理
 ### 1. 问题建模
@@ -69,7 +69,7 @@ attractor = np.where(np.random.rand(*x.shape) < alpha, pbest, gbest)
 new_position = np.where(np.random.rand(*x.shape) < 0.5, attractor, x)
 ```
 
-#### （2）模拟退火优化
+#### （2）轻量模拟退火优化
 每2代对粒子应用SA，通过温度控制接受较差解的概率：
 \[
 P_{\text{accept}} = \begin{cases} 
