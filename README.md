@@ -39,6 +39,7 @@ python 8_bishops_solver.py
 ### 2. 参数调整
 若需自定义算法参数，可修改`main`函数中`solve_bishops_hybrid_sa`的调用参数：
 # 示例：修改粒子数、最大迭代次数、贪心精炼间隔
+```
 best_board, solutions, history, solution_discovery_points = solve_bishops_hybrid_sa(
     n_particles=120,    # 粒子数（建议80-200，平衡多样性与效率）
     max_iter=300,       # 最大迭代次数（建议200-500，确保充分搜索，实测300可以稳定找到20个左右）
@@ -50,7 +51,7 @@ best_board, solutions, history, solution_discovery_points = solve_bishops_hybrid
 - `initial_temp=200`：SA初始温度（150-250，影响早期探索能力）
 - `cooling_rate=0.98`：SA冷却率（0.95-0.99，平衡探索与收敛）
 ```
-
+```
 ## 算法原理
 ### 1. 问题建模
 - **解编码**：8×8二进制矩阵（`1`表示主教，`0`表示空位）
