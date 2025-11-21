@@ -52,7 +52,7 @@ best_board, solutions, history, solution_discovery_points = solve_bishops_hybrid
 - `cooling_rate=0.98`：SA冷却率（0.95-0.99，平衡探索与收敛）
 ```
 
-
+```
 ## 算法原理
 ### 1. 问题建模
 - **解编码**：8×8二进制矩阵（`1`表示主教，`0`表示空位）
